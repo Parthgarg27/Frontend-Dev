@@ -1,0 +1,65 @@
+1. Difference between Frontend, Backend, and Full-Stack Development:
+- Frontend Development: Deals with the visual part of a website that users interact with directly. It includes HTML, CSS, and JavaScript.
+  Example: The buttons, forms, and layouts you see on Amazon’s product page.
+- Backend Development: Handles the server-side logic, databases, and APIs that support frontend features.
+  Example: When you log in to Facebook, the backend verifies your credentials.
+- Full-Stack Development: Combines both frontend and backend development skills.
+  Example: A developer who builds both the interface and the database connection of an e-commerce site.
+
+2. Simple Diagram of Client-Server Model:
+Client (Browser) --> Internet --> Web Server --> Database
+         ^                                      |
+         |--------------------------------------| (Response Back)
+
+3. How a Browser Requests and Displays a Web Page:
+- The user enters a URL in the browser.
+- The browser sends an HTTP request to the web server.
+- The server locates the requested file or processes data and sends an HTTP response.
+- The browser receives HTML, CSS, and JS files and renders them into a visual web page.
+
+4. Tools Required for Web Development Environment:
+- Text Editor (VS Code): To write and edit code.
+- Browser (Chrome/Firefox): To test and debug websites.
+- Version Control (Git): To manage code changes.
+- Node.js: To run JavaScript outside the browser and manage packages.
+- Live Server Extension: To preview web pages in real-time.
+
+5. What is a Web Server:
+A web server is software that delivers web content (HTML, CSS, JS, etc.) to users via HTTP/HTTPS.
+Examples: Apache, Nginx, Microsoft IIS, LiteSpeed.
+
+6. Roles in a Project:
+- Frontend Developer: Designs and implements user interfaces.
+- Backend Developer: Creates APIs and manages server-side logic.
+- Database Administrator (DBA): Maintains and secures the database, ensuring efficient data retrieval.
+
+7. Installing and Configuring VS Code:
+Steps:
+1. Download and install VS Code from https://code.visualstudio.com/
+2. Install extensions: Live Server, Prettier, HTML CSS Support.
+3. Create a workspace and start coding.
+(Screenshot to be attached separately after setup.)
+
+8. Difference between Static and Dynamic Websites:
+- Static Website: Displays fixed content; does not change unless manually edited.
+  Example: Portfolio or business landing page.
+- Dynamic Website: Content changes based on user interaction or database data.
+  Example: Facebook or YouTube.
+
+9. Five Web Browsers and Rendering Engines:
+- Google Chrome – Blink engine
+- Mozilla Firefox – Gecko engine
+- Microsoft Edge – Blink engine
+- Safari – WebKit engine
+- Opera – Blink engine
+Rendering engines determine how HTML, CSS, and JavaScript are displayed on screen.
+
+10. Basic Web Architecture Flow:
+[Client] <--> [Web Server] <--> [Database]
+                 |
+               [API Layer]
+
+Explanation:
+- The client sends requests to the web server.
+- The server communicates with the database via APIs.
+- The response (data or HTML) is sent back to the client browser for display.

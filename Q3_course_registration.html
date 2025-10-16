@@ -1,0 +1,79 @@
+<!-- Q3_course_registration.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Q3 - Course Registration Form</title>
+</head>
+<body>
+  <header>
+    <h1>Course Registration</h1>
+  </header>
+
+  <!-- Registration form structure (HTML only) -->
+  <main>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="you@example.com"><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Course Selection</legend>
+        <label for="course">Select Course:</label><br>
+        <select id="course" name="course">
+          <option value="web" selected>Web Development</option>
+          <option value="data">Data Science</option>
+          <option value="ml">Machine Learning</option>
+        </select><br><br>
+
+        <label for="mode">Mode:</label><br>
+        <select id="mode" name="mode">
+          <option value="online" selected>Online</option>
+          <option value="offline">Offline</option>
+        </select>
+      </fieldset>
+
+      <!-- Submit is present but behavior is not required -->
+      <p><input type="submit" value="Register"></p>
+    </form>
+
+    <!-- Course schedule table -->
+    <h2>Available Course Schedules</h2>
+    <table border="1" title="Course schedules">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time</th>
+          <th>Instructor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>6:00 PM - 8:00 PM</td>
+          <td>Dr. S. Kapoor</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>6:00 PM - 8:00 PM</td>
+          <td>Ms. R. Iyer</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>10:00 AM - 1:00 PM</td>
+          <td>Mr. P. Singh</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>Contact: training@example.com</p>
+  </footer>
+</body>
+</html>

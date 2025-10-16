@@ -1,0 +1,66 @@
+<!-- Q2_product_catalog.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Q2 - Product Catalog</title>
+</head>
+<body>
+  <header>
+    <h1>Online Store - Product Catalog</h1>
+  </header>
+
+  <!-- Product table with images and colspan/rowspan usage -->
+  <main>
+    <table border="1" title="Product catalog table">
+      <caption>Available Products</caption>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Price (INR)</th>
+          <th>Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">
+            <strong>Wireless Headphones</strong><br>
+            <img src="headphones.jpg" alt="Wireless Headphones" width="120">
+          </td>
+          <td>Over-ear, noise-cancelling, 20h battery life.</td>
+          <td>3,499</td>
+          <td>In Stock</td>
+        </tr>
+        <tr>
+          <!-- description continued for same product row using rowspan above -->
+          <td colspan="2">Includes carry pouch and charging cable.</td>
+          <td>In Stock</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Smart Watch</strong><br>
+            <img src="smartwatch.jpg" alt="Smart Watch" width="120">
+          </td>
+          <td>Fitness tracking, heart-rate monitor, 7-day battery.</td>
+          <td>4,999</td>
+          <td>Out of Stock</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Bluetooth Speaker</strong><br>
+            <img src="speaker.jpg" alt="Bluetooth Speaker" width="120">
+          </td>
+          <td>Portable speaker with rich bass and splash-proof design.</td>
+          <td>1,299</td>
+          <td>Limited Stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>© 2025 Online Store</p>
+  </footer>
+</body>
+</html>

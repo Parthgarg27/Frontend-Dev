@@ -1,0 +1,47 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f5f5f5; /* Background color for the page [cite: 77] */
+    line-height: 1.6;
+}
+
+.newspaper-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px; /* Padding around the main content area [cite: 77] */
+    border: 1px solid #ddd;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    column-span: all; /* Heading spans across all columns  */
+}
+
+.content {
+    column-count: 3; /* Creates three vertical columns  */
+    column-gap: 40px; /* Space between columns  */
+    text-align: justify; /* Justifies all text [cite: 74] */
+}
+
+/* Image aligned to the left using float */
+.floated-image {
+    float: left; /* Requirement  */
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        column-count: 2; /* Switch to two columns */
+    }
+}
+
+@media (max-width: 500px) {
+    .content {
+        column-count: 1; /* Switch to a single column */
+    }
+}

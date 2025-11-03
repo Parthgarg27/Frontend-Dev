@@ -1,0 +1,85 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f4f8; /* Custom background color */
+    color: #333; /* Custom text color for contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Use viewport height unit */
+}
+
+.container {
+    width: 80%; /* Use percentage unit */
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* Header Styles - Fixed Position */
+.site-header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem 0; /* Use rem unit */
+    position: fixed; /* Fixes header to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.8em; /* Use em unit */
+}
+
+.site-header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-header nav li {
+    display: inline-block;
+    margin-left: 20px; /* Use pixel unit */
+}
+
+.site-header nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.site-main {
+    padding-top: 80px; /* Add padding to avoid content being hidden by fixed header */
+    padding-bottom: 20px;
+    flex-grow: 1; /* Allows main to grow and push footer down */
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px; /* Use pixel unit */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1em; /* Use em unit */
+}
+
+.bio {
+    font-size: 1.1rem; /* Use rem unit */
+    line-height: 1.6;
+}
+
+/* Footer Styles - Stays at Bottom */
+.site-footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem 0; /* Use rem unit */
+    width: 100%;
+}

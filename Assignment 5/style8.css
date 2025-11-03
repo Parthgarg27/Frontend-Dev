@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef1f5;
+}
+
+/* Fixed header at the top  */
+.dashboard-header {
+    background-color: #fff;
+    color: #333;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.dashboard-container {
+    display: flex;
+    padding-top: 60px; /* Offset for fixed header */
+}
+
+/* Sidebar on the left */
+.sidebar {
+    width: 240px;
+    background-color: #2d3e50;
+    color: #ecf0f1;
+    min-height: calc(100vh - 60px); /* Adjusts to full screen height  */
+    padding: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sidebar nav li a:hover {
+    background-color: #34495e;
+}
+
+/* Main content area on the right */
+.main-content {
+    flex-grow: 1; /* Takes up remaining space */
+    padding: 30px;
+}
+
+.content-boxes {
+    display: flex;
+    gap: 20px; /* Even spacing for boxes [cite: 69] */
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for boxes [cite: 69] */
+    flex: 1;
+}
+
+/* Responsive: Sidebar stacks on top on smaller screens */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column; /* Stack sidebar and main content */
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        box-sizing: border-box;
+    }
+}

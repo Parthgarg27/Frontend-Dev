@@ -1,0 +1,12 @@
+/* Q6 CSS: Animations */
+body{font-family:system-ui,Arial;height:100vh;display:flex;align-items:center;justify-content:center;margin:0;background:#fafafa;}
+.center{display:flex;gap:24px;align-items:center;}
+.box{width:60px;height:60px;background:#9ae; border-radius:8px; animation:slide 2s ease-in-out infinite alternate;}
+.ball{width:48px;height:48px;background:#f99;border-radius:50%; animation:bounce 1s ease-in-out infinite;}
+.text{font-weight:600;}
+.text.color-change{animation:colorPulse 3s ease-in-out infinite; animation-delay:0.5s;}
+
+/* keyframes */
+@keyframes slide{to{transform:translateY(-24px) rotate(6deg);}}
+@keyframes bounce{50%{transform:translateY(-40px);} 100%{transform:translateY(0);}}
+@keyframes colorPulse{0%{color:#333;}50%{color:#2b7cff;}100%{color:#333;}}

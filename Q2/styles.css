@@ -1,0 +1,22 @@
+/* Q2 CSS: Tooltip demonstration */
+body{font-family:system-ui,Arial;margin:0;padding:40px;background:#fafafa;color:#111;}
+.center{display:flex;flex-direction:column;align-items:center;gap:20px;}
+.icons{display:flex;gap:30px;}
+.item{position:relative;display:flex;align-items:center;justify-content:center;}
+.trigger{font-size:30px;cursor:default;padding:10px;border-radius:8px;}
+.tooltip{
+  position:absolute;
+  bottom:110%;
+  left:50%;
+  transform:translateX(-50%) translateY(6px);
+  white-space:nowrap;
+  padding:8px 10px;border-radius:6px;background:#222;color:#fff;
+  opacity:0; pointer-events:none;
+  transition:opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+.item:hover .tooltip,
+.item:focus-within .tooltip{
+  opacity:1; transform:translateX(-50%) translateY(0);
+}

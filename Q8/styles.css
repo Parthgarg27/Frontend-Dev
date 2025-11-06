@@ -1,0 +1,7 @@
+/* Q8 CSS: Box-sizing comparison */
+body{font-family:system-ui,Arial;padding:30px;}
+.compare{display:flex;gap:20px;align-items:flex-start;justify-content:center;flex-wrap:wrap;}
+.box{width:220px;padding:20px;border:6px solid #2b7cff;border-radius:8px;}
+.default{background:#f0f7ff;}
+.border-box{background:#fff3f0; box-sizing:border-box;}
+@media(max-width:600px){.compare{flex-direction:column;align-items:stretch}.box{width:100%}}

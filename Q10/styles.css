@@ -1,0 +1,11 @@
+/* Q10 CSS: Mini UI Layout */
+*{box-sizing:border-box;}
+body{font-family:system-ui,Arial;margin:0;padding:0;background:#fbfdff;color:#111;}
+.site-header, .site-footer{text-align:center;padding:12px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.04);}
+.container{display:flex;justify-content:center;padding:28px;}
+.card{width:360px;background:#fff;padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.06);display:flex;flex-direction:column;gap:12px;}
+label{display:flex;flex-direction:column;font-size:14px;}
+input{padding:8px;border-radius:8px;border:1px solid #ddd;margin-top:6px;}
+.actions{display:flex;gap:10px;margin-top:8px;}
+.btn{padding:8px 12px;border-radius:8px;border:0;background:#2b7cff;color:#fff;cursor:pointer;}
+.thumb{height:48px;width:48px;border-radius:6px;background:linear-gradient(135deg,#e0eafc,#cfdef3);align-self:flex-end;}

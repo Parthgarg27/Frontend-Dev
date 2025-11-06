@@ -1,0 +1,21 @@
+/* Q4 CSS: Selectors examples */
+/* element selector */
+p{line-height:1.5;}
+
+/* id selector */
+#intro{font-weight:600;}
+
+/* class selector */
+.highlight{background:#fff3cd;padding:6px;border-radius:4px;}
+
+/* attribute selector */
+a[title]{text-decoration:underline;}
+
+/* child combinator */
+.wrap > h2{margin-top:12px;}
+
+/* adjacent sibling (+) */
+p + p{margin-top:6px;}
+
+/* general sibling (~) */
+p ~ p{color:#444;}

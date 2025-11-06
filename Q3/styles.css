@@ -1,0 +1,11 @@
+/* Q3 CSS: Image showcase using Grid */
+body{font-family:system-ui,Arial;padding:24px;color:#111;}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start;}
+.card{border-radius:10px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.08);background:#fff;}
+.card .img{height:160px;background:linear-gradient(135deg,#e0eafc,#cfdef3);transition:transform 0.25s ease, filter 0.25s ease;display:block;}
+.card:hover .img{transform:scale(1.08); filter:brightness(0.85);}
+.card figcaption{padding:10px 12px;font-size:14px;color:#333;}
+@media(max-width:700px){
+  .gallery{grid-template-columns:1fr;}
+  .card .img{height:220px;}
+}

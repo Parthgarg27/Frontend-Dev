@@ -1,0 +1,7 @@
+/* Q9 CSS: Pseudo + transform + transition */
+body{font-family:system-ui,Arial;padding:24px;}
+.row{display:flex;gap:14px;}
+.demo{padding:10px 16px;border-radius:8px;border:0;background:#2b7cff;color:#fff;transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;}
+.demo:hover{transform:scale(1.06); background:#1e62d6; box-shadow:0 10px 30px rgba(43,124,255,0.18);}
+.demo:focus{outline:3px solid rgba(43,124,255,0.18); outline-offset:3px;}
+.demo:active{transform:scale(0.98);}

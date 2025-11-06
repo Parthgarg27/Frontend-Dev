@@ -1,0 +1,9 @@
+/* Q7 CSS: Simple UI components */
+body{font-family:system-ui,Arial;background:linear-gradient(120deg,#f7fbff,#fffaf0);display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}
+.card{padding:20px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,0.08);background:#fff;min-width:320px;}
+.controls{display:flex;gap:10px;align-items:center;margin-top:12px;}
+input[type="search"]{padding:8px 10px;border-radius:8px;border:1px solid #ddd;flex:1;}
+input[type="search"]:focus{outline:3px solid rgba(43,124,255,0.15);}
+select{padding:8px;border-radius:8px;border:1px solid #ddd;}
+.btn{padding:8px 12px;border-radius:8px;background:#2b7cff;color:#fff;border:0;cursor:pointer;}
+.btn:hover{transform:translateY(-2px);}

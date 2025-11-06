@@ -1,0 +1,8 @@
+body{font-family:Arial;margin:0;animation:fade 1s ease;}
+header nav{display:flex;justify-content:space-between;align-items:center;padding:10px;background:#2b7cff;color:#fff;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:20px;}
+.grid section{background:#eee;padding:20px;transition:transform 0.3s;}
+.grid section:hover{transform:scale(1.03);}
+footer{text-align:center;padding:10px;background:#2b7cff;color:#fff;}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+@media(max-width:700px){.grid{grid-template-columns:1fr;}}

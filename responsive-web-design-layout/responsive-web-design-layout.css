@@ -1,0 +1,8 @@
+body{font-family:Arial;margin:0;}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:#2b7cff;color:#fff;}
+nav a{color:#fff;margin-left:10px;text-decoration:none;}
+.features{display:flex;gap:10px;padding:20px;}
+.box{flex:1;background:#eee;padding:20px;text-align:center;transition:transform 0.3s;}
+.box:hover{transform:scale(1.05);}
+footer{text-align:center;padding:10px;background:#2b7cff;color:#fff;}
+@media(max-width:750px){.features{flex-direction:column;}}

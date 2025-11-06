@@ -1,0 +1,5 @@
+body{font-family:Arial;margin:0;padding:20px;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+.box{background:#eee;padding:15px;border-radius:8px;transition:background 0.3s,color 0.3s;}
+.box:hover{background:linear-gradient(45deg,#2b7cff,#a0c4ff);color:#fff;}
+@media(max-width:600px){.grid{grid-template-columns:1fr;}}

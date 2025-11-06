@@ -1,0 +1,13 @@
+/* Q7 - Three bouncing dots loader */
+body{height:100vh;display:flex;align-items:center;justify-content:center;margin:0;background:#fff}
+.loader{display:flex;gap:12px;align-items:flex-end}
+.dot{width:16px;height:16px;border-radius:50%;background:#222;transform:translateY(0);animation:jump 0.8s infinite}
+.dot.a{animation-delay:0s}
+.dot.b{animation-delay:0.15s}
+.dot.c{animation-delay:0.3s}
+
+@keyframes jump{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-18px)}
+  100%{transform:translateY(0)}
+}

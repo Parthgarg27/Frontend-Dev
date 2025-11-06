@@ -1,0 +1,14 @@
+/* Q3 - Header, Main, Footer with Flexbox */
+body{display:flex;flex-direction:column;min-height:100vh;margin:0;font-family:Arial}
+.topnav{display:flex;justify-content:space-around;background:#222;color:#fff;padding:16px}
+.topnav a{color:#fff;text-decoration:none}
+.main{display:flex;gap:16px;flex:1;padding:24px;align-items:center;justify-content:center}
+.box{flex:1;min-width:160px;padding:32px;background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:transform .25s;display:flex;align-items:center;justify-content:center}
+.box:hover{transform:rotate(2deg)}
+.foot{background:#f1f1f1;padding:12px;text-align:center}
+
+/* Keep layout responsive */
+@media (max-width:800px){
+  .main{flex-direction:column;padding:16px}
+  .box{width:100%}
+}

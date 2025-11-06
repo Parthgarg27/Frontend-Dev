@@ -1,0 +1,14 @@
+/* Q6 - Responsive blog with grid-template-areas */
+body{margin:0;font-family:Arial}
+.site{display:grid;grid-template-columns:240px 1fr;grid-template-areas:"head head" "sidebar main" "foot foot";gap:16px;padding:16px;min-height:100vh}
+.head{grid-area:head;padding:12px;background:#222;color:#fff;border-radius:6px;display:flex;justify-content:space-between;align-items:center}
+.sidebar{grid-area:sidebar;background:#fff;padding:12px;border-radius:6px}
+.main{grid-area:main;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.post{background:#fff;padding:16px;border-radius:6px}
+.foot{grid-area:foot;background:#f1f1f1;padding:12px;border-radius:6px;text-align:center}
+
+/* Under 800px: sidebar below main */
+@media (max-width:800px){
+  .site{grid-template-columns:1fr;grid-template-areas:"head" "main" "sidebar" "foot"}
+  .main{grid-template-columns:1fr}
+}

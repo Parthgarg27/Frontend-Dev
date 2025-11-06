@@ -1,0 +1,18 @@
+/* Q4 - Dashboard using CSS Grid */
+body{margin:0;font-family:Arial}
+.grid{display:grid;grid-template-columns:240px 1fr;grid-template-rows:64px 1fr;grid-gap:16px;min-height:100vh;padding:16px}
+.header{grid-column:1/3;background:#222;color:#fff;padding:16px;border-radius:8px}
+.sidebar{background:#fff;padding:16px;border-radius:8px}
+.content{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:120px;gap:16px;padding:0}
+.card{background:#fff;border-radius:8px;padding:16px;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:scale(1.03);box-shadow:0 8px 20px rgba(0,0,0,.12)}
+.span2{grid-column:span 2;}
+
+/* Responsive: collapse sidebar under header on small screens */
+@media (max-width:800px){
+  .grid{grid-template-columns:1fr;grid-template-rows:auto auto 1fr}
+  .header{grid-column:1}
+  .sidebar{grid-column:1}
+  .content{grid-template-columns:1fr;grid-auto-rows:120px}
+  .span2{grid-column:auto}
+}

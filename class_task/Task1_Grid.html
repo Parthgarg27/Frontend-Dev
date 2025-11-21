@@ -1,0 +1,234 @@
+<!--Practical Tasks 1:
+(Students must write code and attach screenshots or output.)
+
+Responsive Layout (Grid System)
+Create a responsive 3-column layout using Bootstrap where each column displays an image, a title, and a short description.
+
+Bootstrap Components Page
+Create a webpage showing:
+One button of each type: btn-primary, btn-success, btn-warning
+One alert message of each type: alert-success, alert-warning, alert-danger
+One card component with an image and button.
+
+Theme Customization
+Use CSS Variables to create a custom color theme (e.g., coral and teal) overriding Bootstrap’s default colors.
+
+Carousel Implementation
+Create a Bootstrap carousel with 3 slides (images with captions). Use transition time of 2 seconds per slide.
+
+Progress Bar
+Display 3 progress bars showing task completion (50%, 75%, and 100%) using different colors and striped <animation class="-->
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Powerpuff Girls Themed Bootstrap Mini Site</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* 🌸 Custom Powerpuff Theme Colors */
+    :root {
+      --blossom-pink: #ff69b4;
+      --bubbles-blue: #8be9fd;
+      --buttercup-green: #7CFC00;
+      --ppf-yellow: #fff59d;
+      --ppf-bg: #fff0f5;
+      --ppf-text: #333;
+    }
+
+    body {
+      background: var(--ppf-bg);
+      color: var(--ppf-text);
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* 💖 Powerpuff Custom Buttons */
+    .btn-primary {
+      background-color: var(--blossom-pink);
+      border: none;
+    }
+
+    .btn-success {
+      background-color: var(--buttercup-green);
+      border: none;
+    }
+
+    .btn-warning {
+      background-color: var(--bubbles-blue);
+      border: none;
+      color: #000;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+      transition: 0.3s ease;
+    }
+
+    /* 💫 Alerts with Soft Glow */
+    .alert {
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 💕 Card Styling */
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-title {
+      color: var(--blossom-pink);
+      font-weight: bold;
+    }
+
+    /* 🌈 Column Section Styling */
+    .row img {
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    }
+
+    h3 {
+      margin-top: 10px;
+      color: var(--blossom-pink);
+    }
+
+    p {
+      color: #555;
+    }
+
+    /* 🎀 Section Headings */
+    h2.section-title {
+      text-align: center;
+      color: var(--bubbles-blue);
+      font-weight: bold;
+      margin: 40px 0 20px;
+    }
+
+    /* 💎 Custom progress bar colors */
+    .progress-bar.bg-blossom {
+      background-color: var(--blossom-pink);
+    }
+
+    .progress-bar.bg-bubbles {
+      background-color: var(--bubbles-blue);
+    }
+
+    .progress-bar.bg-buttercup {
+      background-color: var(--buttercup-green);
+    }
+
+    /* 💗 Carousel Styling */
+    .carousel-caption {
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      padding: 10px;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container my-5">
+
+    <!-- 🌸 Responsive 3-Column Layout -->
+    <h2 class="section-title">Meet The Powerpuff Trio</h2>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="https://th.bing.com/th/id/OIP.FI1j9SajYBGjbBswYL_jBAHaL9?w=196&h=317&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="img-fluid" alt="Blossom">
+        <h3>Blossom</h3>
+        <p>The smart and confident leader with a heart of pink power!</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://th.bing.com/th/id/OIP.qzMF-ZHMo7S8PCg6F3M2aAHaHy?w=164&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="img-fluid" alt="Bubbles">
+        <h3>Bubbles</h3>
+        <p>Sweet, joyful, and always spreading positivity with her blue spark!</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="https://th.bing.com/th/id/OIP.KoPuCOXP64K00WBr8xEr6gHaEK?w=243&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="img-fluid" alt="Buttercup">
+        <h3>Buttercup</h3>
+        <p>The toughest fighter with bold green energy and courage!</p>
+      </div>
+    </div>
+
+    <!-- 🌟 Bootstrap Components -->
+    <h2 class="section-title">Powerpuff Components</h2>
+    <div class="text-center my-4">
+      <button class="btn btn-primary m-1">Blossom Button</button>
+      <button class="btn btn-success m-1">Buttercup Button</button>
+      <button class="btn btn-warning m-1">Bubbles Button</button>
+
+      <div class="alert alert-success mt-3">💚 Power success! Mission complete!</div>
+      <div class="alert alert-warning">💙 Careful! Mojo Jojo might strike!</div>
+      <div class="alert alert-danger">💔 Danger! Monster attack in Townsville!</div>
+
+      <div class="card mx-auto mt-3" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/OIP.soJ7WT3ZTXXG5Hn0IDJeswHaGR?w=223&h=189&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="card-img-top" alt="Powerpuff Card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Powerpuff Squad</h5>
+          <p class="card-text">Join Blossom, Bubbles, and Buttercup in saving the world before bedtime!</p>
+          <a href="#" class="btn btn-primary">Join Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🎠 Carousel -->
+    <h2 class="section-title">Powerpuff Moments</h2>
+    <div id="ppfCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://th.bing.com/th/id/OIP.KzwgT9xmo28IPP-AeWugMAHaEK?w=310&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="d-block w-100 rounded" alt="Slide 1">
+          <div class="carousel-caption">
+            <h5>Saving Townsville!</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://th.bing.com/th/id/OIP.MH6RQyrfi9_ZkV_jZT7_4gHaEK?w=265&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="d-block w-100 rounded" alt="Slide 2">
+          <div class="carousel-caption">
+            <h5>Girl Power!</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://th.bing.com/th/id/OIP.M0M92PoX3m2-yq5izWEzqwHaFj?w=202&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="d-block w-100 rounded" alt="Slide 3">
+          <div class="carousel-caption">
+            <h5>Victory Again!</h5>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#ppfCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#ppfCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+    <!-- 📊 Progress Bars -->
+    <h2 class="section-title">Mission Progress</h2>
+    <p>Winning against our enemies...</p>
+    <div class="progress mb-3">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-blossom" style="width: 50%">50%</div>
+    </div>
+    <p>Fighting with each other..</p>
+    <div class="progress mb-3">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-bubbles" style="width: 75%">75%</div>
+    </div>
+    <p>Loving you all kiddos...</p>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-buttercup" style="width: 100%">100%</div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

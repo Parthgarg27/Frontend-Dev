@@ -1,0 +1,53 @@
+/* style.css */
+
+/* 1. Smooth Scrolling */
+/* Makes the page glide when clicking navbar links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 56px; /* Offset for the fixed navbar */
+}
+
+/* 2. Hero Section Styling */
+.hero-section {
+    min-height: 100vh; /* Fills the entire screen height */
+    background-color: #f8f9fa; /* Bootstrap 'bg-light' */
+    /* Adds padding to account for the fixed navbar */
+    padding-top: 56px; 
+}
+
+/* 3. Hero Image Styling */
+.hero-image {
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover; /* Prevents image from stretching */
+}
+
+/* 4. Project Card Styling */
+.project-card {
+    /* Adds a smooth transition for the hover effect */
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    /* Lifts the card up and adds a stronger shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+/* 5. Uniform Card Image Height */
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Prevents stretching */
+}
+
+/* 6. Footer Social Icon Styling */
+.social-icon i {
+    font-size: 1.5rem; /* Makes icons larger */
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover i {
+    /* Changes color to Bootstrap's primary blue on hover */
+    color: #0d6efd; 
+    transform: translateY(-3px); /* Lifts icon on hover */
+}

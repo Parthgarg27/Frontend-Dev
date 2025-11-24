@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; padding:20px; transition: background 0.25s, color 0.25s; }
+button { padding:6px 10px; margin-right:6px; }
+body[data-theme="light"] { background: #ffffff; color:#111; }
+body[data-theme="dark"] { background: #111; color:#eee; }
+body[data-theme="blue"] { background: linear-gradient(135deg,#cfe8ff,#e6f0ff); color:#052a4a; }

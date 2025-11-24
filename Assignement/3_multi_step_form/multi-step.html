@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="multi-step.css">
+</head>
+<body>
+  <h1>3-Step Form</h1>
+  <form id="multiStepForm" novalidate>
+    <div class="step" data-step="1">
+      <label>Name: <input id="nameInput" required /></label>
+      <div class="controls">
+        <button type="button" id="next1">Next</button>
+      </div>
+    </div>
+
+    <div class="step" data-step="2" hidden>
+      <label>Email: <input id="emailInput" type="email" required /></label>
+      <div class="controls">
+        <button type="button" id="back2">Back</button>
+        <button type="button" id="next2">Next</button>
+      </div>
+    </div>
+
+    <div class="step" data-step="3" hidden>
+      <label>Password: <input id="passwordInput" type="password" required minlength="6" /></label>
+      <div class="controls">
+        <button type="button" id="back3">Back</button>
+        <button type="button" id="finishBtn">Finish</button>
+      </div>
+    </div>
+  </form>
+
+  <div id="summary" hidden>
+    <h2>Summary</h2>
+    <pre id="summaryContent"></pre>
+  </div>
+
+  <script src="multi-step.js"></script>
+</body>
+</html>

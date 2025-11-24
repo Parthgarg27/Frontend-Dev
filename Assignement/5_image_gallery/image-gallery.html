@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Image Gallery Modal</title>
+  <link rel="stylesheet" href="image-gallery.css">
+</head>
+<body>
+  <h1>Image Gallery (click to preview)</h1>
+  <div id="gallery" class="grid">
+    <!-- 6 sample images (placeholder service) -->
+    <img src="https://picsum.photos/id/1015/200/140" alt="img1" data-large="https://picsum.photos/id/1015/800/600">
+    <img src="https://picsum.photos/id/1025/200/140" alt="img2" data-large="https://picsum.photos/id/1025/800/600">
+    <img src="https://picsum.photos/id/1035/200/140" alt="img3" data-large="https://picsum.photos/id/1035/800/600">
+    <img src="https://picsum.photos/id/1045/200/140" alt="img4" data-large="https://picsum.photos/id/1045/800/600">
+    <img src="https://picsum.photos/id/1055/200/140" alt="img5" data-large="https://picsum.photos/id/1055/800/600">
+    <img src="https://picsum.photos/id/1065/200/140" alt="img6" data-large="https://picsum.photos/id/1065/800/600">
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <img id="modalImage" src="" alt="Preview">
+    </div>
+  </div>
+
+  <script src="image-gallery.js"></script>
+</body>
+</html>

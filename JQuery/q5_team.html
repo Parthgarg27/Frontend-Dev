@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><title>Q5 - Team Directory</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+  .dept { background: #f0f0f0; padding: 15px; margin: 10px; border-radius: 8px; }
+  .manager { background: #007bff; color: white; padding: 10px; cursor: pointer; }
+  .member { padding: 8px; margin: 5px; }
+  .highlight { background: yellow !important; }
+  .contact { display: none; color: #555; }
+</style>
+</head>
+<body>
+  <div class="dept" id="engineering">
+    <div class="manager">Devansh (Engineering Manager)</div>
+    <div class="member">Rahul <span class="contact">rahul@company.com</span></div>
+    <div class="member">Priya <span class="contact">priya@company.com</span></div>
+    <div class="member">Amit <span class="contact">amit@company.com</span></div>
+  </div>
+  <div class="dept" id="design">
+    <div class="manager">Sneha (Design Head)</div>
+    <div class="member">Karan</div>
+    <div class="member">Neha</div>
+  </div>
+
+  <script>
+    $(function() {
+      // 1. Click manager → highlight reports
+      $(".manager").click(function() {
+        $(this).nextAll(".member").toggleClass("highlight");
+      });
+
+      // 2. Hover → show contact
+      $(".member").hover(function() {
+        $(this).find(".contact").show();
+      }, function() {
+        $(this).find(".contact").hide();
+      });
+
+      // 3. Click department → highlight all members
+      $(".dept").click(function() {
+        $(this).children(".member").toggleClass("highlight");
+      });
+
+      // 4. Random employee highlight siblings
+      setTimeout(() => $(".member").eq(2).siblings(".member").addClass("highlight"), 2000);
+    });
+  </script>
+</body>
+</html>

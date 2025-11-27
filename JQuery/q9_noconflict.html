@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q9 - noConflict Demo</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>var jq1 = $.noConflict();</script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>var jq3 = $.noConflict(true);</script>
+</head>
+<body>
+  <button id="btn1">Click (v1)</button>
+  <button id="btn3">Click (v3)</button>
+  <div id="msg"></div>
+
+  <script>
+    // jQuery v1.12
+    jq1("#btn1").click(function() {
+      jq1("#msg").html("Hello from jQuery 1.12!").css("color","blue");
+    });
+
+    // jQuery v3.7
+    jq3("#btn3").click(function() {
+      jq3("#msg").html("Hello from jQuery 3.7!").css("color","red");
+    });
+
+    // Both work together!
+  </script>
+</body>
+</html>

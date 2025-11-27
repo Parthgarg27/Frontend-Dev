@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q4 - Special Offer Banner</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 30px; background: #f8f9fa; }
+    .banner { width: 80%; margin: 20px auto; padding: 40px; font-size: 28px; color: white; border-radius: 15px; display: none; }
+    #b1 { background: linear-gradient(45deg, #ff6b6b, #ee5a24); }
+    #b2 { background: linear-gradient(45deg, #1dd1a1, #10ac84); }
+    #b3 { background: linear-gradient(45deg, #5f27cd, #341f97); }
+    #b4 { background: linear-gradient(45deg, #feca57, #ff9ff3); }
+    #b5 { background: linear-gradient(45deg, #48dbfb, #0abde3); }
+    button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Special Offers</h1>
+  <div id="b1" class="banner">50% OFF on All Laptops!</div>
+  <div id="b2" class="banner">Free Shipping This Week!</div>
+  <div id="b3" class="banner">Buy 1 Get 1 Free on T-Shirts</div>
+  <div id="b4" class="banner">New Year Sale – Up to 70% Off</div>
+  <div id="b5" class="banner">Flash Sale: Earbuds @ ₹999 Only!</div>
+
+  <div>
+    <button id="hide">Hide All</button>
+    <button id="show">Show All</button>
+    <button id="slide">Slide Toggle</button>
+    <button id="fade">Fade Toggle</button>
+  </div>
+
+  <script>
+    $(function() {
+      let current = 0;
+      const banners = $(".banner");
+      banners.eq(0).fadeIn();
+
+      // Auto rotate every 5 seconds
+      setInterval(() => {
+        banners.eq(current).fadeOut(1000);
+        current = (current + 1) % banners.length;
+        banners.eq(current).fadeIn(1000);
+      }, 5000);
+
+      $("#hide").click(() => banners.hide(800));
+      $("#show").click(() => banners.show(800));
+      $("#slide").click(() => banners.slideToggle(1000));
+      $("#fade").click(() => banners.fadeToggle(1000));
+    });
+  </script>
+</body>
+</html>

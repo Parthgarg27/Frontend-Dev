@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q2 - Product Highlight</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .product { padding: 20px; margin: 15px; border: 1px solid #ddd; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+    .highlight { background: #fff3cd; border: 2px solid #ffc107; }
+    .selected { border: 3px solid red; }
+    .discount { background: #d4edda; }
+    .details { display: none; color: #555; margin-top: 10px; }
+    .out-of-stock { opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <h2>Featured Products</h2>
+  <div class="product" data-stock="0">Laptop Pro <span class="fav">♥</span> <small>(Out of stock)</small></div>
+  <div class="product discount" data-discount="20">Smartphone X <span class="fav">♥</span> <div class="details">12GB RAM, 512GB</div></div>
+  <div class="product">Wireless Earbuds <span class="fav">♥</span> <div class="details">20hr battery</div></div>
+  <div class="product discount" data-discount="15">Smart Watch <span class="fav">♥</span> <div class="details">Fitness tracking</div></div>
+  <div class="product">Gaming Mouse <span class="fav">♥</span> <div class="details">RGB lighting</div></div>
+
+  <script src="q2_product.js"></script>
+</body>
+</html>

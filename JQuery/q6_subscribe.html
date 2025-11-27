@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><title>Q6 - Subscribe</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script></head>
+<body>
+  <h2>Subscribe to Topics</h2>
+  <ul id="topics">
+    <li data-topic="tech">Tech News <button class="sub">Subscribe</button></li>
+    <li data-topic="sports">Sports <button class="sub">Subscribe</button></li>
+    <li data-topic="music">Music <button class="sub">Subscribe</button></li>
+  </ul>
+  <button id="add">Add New Topic</button>
+  <div id="msg"></div>
+
+  <script>
+    $(function() {
+      $("#topics").on("click", ".sub", function() {
+        const topic = $(this).parent().data("topic");
+        $(this).text("Subscribed").off("click").css("background","green");
+        $("#msg").html(`<p>Subscribed to ${topic}!</p>`).fadeIn().delay(2000).fadeOut();
+      });
+
+      $("#add").click(function() {
+        const newTopic = prompt("Enter topic:");
+        if (newTopic) {
+          $("#topics").append(`<li data-topic="${newTopic}">${newTopic} <button class="sub">Subscribe</button></li>`);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

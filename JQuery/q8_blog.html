@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><title>Q8 - Blog</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script></head>
+<body>
+  <h2>My Blog</h2>
+  <button id="add">Add New Post</button>
+  <button id="prepend">Prepend Featured</button>
+  <button id="remove">Remove Last</button>
+  <div id="posts"></div>
+
+  <script>
+    const posts = ["First post!", "Loving jQuery!", "Learning DOM", "Async is fun", "OOP rocks"];
+    posts.forEach(p => $("#posts").append(`<p class='post'>${p}</p>`));
+
+    $("#add").click(() => $("#posts").append("<p>New post added!</p>"));
+    $("#prepend").click(() => $("#posts").prepend("<p><strong>FEATURED:</strong> Important update!</p>"));
+    $("#remove").click(() => $("#posts p:last").remove());
+    // Highlight posts with keyword
+    setInterval(() => $(".post:contains('jQuery)").css("color", "red"), 3000);
+  </script>
+</body>
+</html>

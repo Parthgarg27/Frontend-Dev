@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head><title>Q10 - Register</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+  .error { border: 2px solid red !important; }
+  .success { color: green; font-size: 20px; }
+  input { padding: 10px; margin: 10px; width: 300px; }
+</style>
+</head>
+<body>
+  <form id="form">
+    <input type="text" id="name" placeholder="Name" required><br>
+    <input type="email" id="email" placeholder="Email" required><br>
+    <input type="password" id="pass" placeholder="Password (min 8 chars)" required><br>
+    <button type="submit">Register</button>
+  </form>
+  <p id="msg"></p>
+
+  <script>
+    $("#form").submit(function(e) {
+      e.preventDefault();
+      $(".error").removeClass("error");
+      $("#msg").empty();
+
+      let valid = true;
+
+      if ($("#name").val().trim() === "") {
+        $("#name").addClass("error"); valid = false;
+      }
+      if (!$("#email").val().includes("@") || $("#email").val().trim() === "") {
+        $("#email").addClass("error"); valid = false;
+      }
+      if ($("#pass").val().length < 8) {
+        $("#pass").addClass("error"); valid = false;
+      }
+
+      if (valid) {
+        $("#msg").html("<span class='success'>Form Submitted Successfully!</span>");
+        this.reset();
+      } else {
+        $("#msg").html("Please fix the errors above").css("color","red");
+      }
+    });
+  </script>
+</body>
+</html>

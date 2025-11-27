@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><title>Q7 - Search Courses</title><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style> .course { padding: 10px; margin: 5px; background: #f9f9f9; } .highlight { background: yellow; } </style>
+</head>
+<body>
+  <input type="text" id="search" placeholder="Search courses...">
+  <p>Found: <span id="count">8</span> courses</p>
+  <div class="course">JavaScript Mastery</div>
+  <div class="course">React for Beginners</div>
+  <div class="course">Node.js & Express</div>
+  <div class="course">Python Django</div>
+  <div>
+
+  <script>
+    $("#search").keyup(function() {
+      const term = $(this).val().toLowerCase();
+      let count = 0;
+      $(".course").each(function() {
+        const text = $(this).text().toLowerCase();
+        if (text.includes(term)) {
+          $(this).show().html($(this).text().replace(new RegExp(term, "gi"), "<span class='highlight'>$&</span>"));
+          count++;
+        } else {
+          $(this).hide();
+        }
+      });
+      $("#count").text(count);
+    });
+  </script>
+</body>
+</html>
